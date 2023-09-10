@@ -1,4 +1,3 @@
-import AirbnbService from './request/index.js';
+import AirbnbService from './request/index.js'
 
-export default AirbnbService;
-
+export default AirbnbService

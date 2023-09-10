@@ -1,5 +1,3 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-export const CenterWrapper = styled.div`
-
-`
+export const CenterWrapper = styled.div``

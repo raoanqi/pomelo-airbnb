@@ -1,9 +1,7 @@
-import React, {memo} from "react";
+import React, { memo } from 'react'
 
 const Entire = memo(() => {
-    return (
-        <div>Entire</div>
-    )
+  return <div>Entire</div>
 })
 
 export default Entire

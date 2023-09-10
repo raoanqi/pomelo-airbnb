@@ -1,11 +1,7 @@
-import React, {memo} from "react";
+import React, { memo } from 'react'
 
 const Footer = memo(() => {
-    return (
-        <div>
-            Footer
-        </div>
-    )
+  return <div>Footer</div>
 })
 
 export default Footer
