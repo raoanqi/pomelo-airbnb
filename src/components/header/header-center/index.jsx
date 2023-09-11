@@ -1,8 +1,18 @@
 import React, { memo } from 'react'
 import { CenterWrapper } from '@/components/header/header-center/style'
+import IconSearch from '@/aeests/svg/icon_search'
 
 const HeaderCenter = memo(() => {
-  return <CenterWrapper>Center</CenterWrapper>
+  return (
+    <CenterWrapper>
+      <div className={'search-bar'}>
+        <div className={'text'}>搜索房源和体验</div>
+        <span className={'icon'}>
+          <IconSearch></IconSearch>
+        </span>
+      </div>
+    </CenterWrapper>
+  )
 })
 
 export default HeaderCenter

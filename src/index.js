@@ -7,6 +7,9 @@ import App from '@/App'
 import 'normalize.css'
 import '@/aeests/css/index.less'
 import store from '@/store'
+// 在项目中使用定义的主题
+import { ThemeProvider } from 'styled-components'
+import theme from '@/aeests/theme'
 
 /**
  *
@@ -20,9 +23,11 @@ root.render(
     {/*组件没有加载完毕时，使用loading效果*/}
     <Suspense fallback={'loading'}>
       <Provider store={store}>
-        <HashRouter>
-          <App />
-        </HashRouter>
+        <ThemeProvider theme={theme}>
+          <HashRouter>
+            <App />
+          </HashRouter>
+        </ThemeProvider>
       </Provider>
     </Suspense>
   </React.StrictMode>
