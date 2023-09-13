@@ -1,10 +1,24 @@
-import React, { memo } from 'react'
+import React, { memo, useState, useEffect } from 'react'
 import { RightWrapper } from '@/components/header/header-right/style'
-import IconGlobal from '@/aeests/svg/icon_global'
-import IconMenu from '@/aeests/svg/icon_menu'
-import IconAvatar from '@/aeests/svg/icon_avatar'
+import IconGlobal from '@/assets/svg/icon_global'
+import IconMenu from '@/assets/svg/icon_menu'
+import IconAvatar from '@/assets/svg/icon_avatar'
 
 const HeaderRight = memo(() => {
+  // 控制是否显示下拉框
+  const [showPanel, setShowPanel] = useState(false)
+  // 副作用代码
+  useEffect(() => {
+    const windowClickHandle = () => {
+      setShowPanel(false)
+    }
+    window.addEventListener('click', windowClickHandle, true)
+    return () => {
+      window.removeEventListener('click', windowClickHandle)
+    }
+  }, [])
+  // 点击显示下拉框
+  const profileClickHandle = () => setShowPanel(true)
   return (
     <RightWrapper>
       <div className={'btns'}>
@@ -14,20 +28,22 @@ const HeaderRight = memo(() => {
           <IconGlobal></IconGlobal>
         </span>
       </div>
-      <div className={'profile'}>
+      <div className={'profile'} onClick={profileClickHandle}>
         <IconMenu></IconMenu>
         <IconAvatar></IconAvatar>
-        <div className="panel">
-          <div className="top">
-            <div className="item register">注册</div>
-            <div className="item login">登录</div>
+        {showPanel && (
+          <div className="panel">
+            <div className="top">
+              <div className="item register">注册</div>
+              <div className="item login">登录</div>
+            </div>
+            <div className="bottom">
+              <div className="item">出租房源</div>
+              <div className="item">开展体验</div>
+              <div className="item">帮助</div>
+            </div>
           </div>
-          <div className="bottom">
-            <div className="item">出租房源</div>
-            <div className="item">开展体验</div>
-            <div className="item">帮助</div>
-          </div>
-        </div>
+        )}
       </div>
     </RightWrapper>
   )

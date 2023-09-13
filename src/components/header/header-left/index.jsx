@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import { LeftWrapper } from '@/components/header/header-left/style'
-import IconLogo from '@/aeests/svg/icon_logo'
+import IconLogo from '@/assets/svg/icon_logo'
 
 const HeaderLeft = memo(() => {
   return (

@@ -5,11 +5,11 @@ import { Provider } from 'react-redux'
 import App from '@/App'
 
 import 'normalize.css'
-import '@/aeests/css/index.less'
+import '@/assets/css/index.less'
 import store from '@/store'
 // 在项目中使用定义的主题
 import { ThemeProvider } from 'styled-components'
-import theme from '@/aeests/theme'
+import theme from '@/assets/theme'
 
 /**
  *

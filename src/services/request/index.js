@@ -29,4 +29,5 @@ class AirbnbRequest {
 }
 
 // 向外导出一个axios实例
-export default new AirbnbRequest(BASE_URL, TIMEOUT)
+const airbnbRequest = new AirbnbRequest(BASE_URL, TIMEOUT)
+export default airbnbRequest
