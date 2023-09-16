@@ -1,5 +1,5 @@
 // 将style字符串转换为对象，如：'fill: #fff; stroke: #000' => {fill: '#fff', stroke: '#000'}
-export const styleStrToObject = styleStr => {
+const styleStrToObject = styleStr => {
   const obj = {},
     s = styleStr
       .toLowerCase()
@@ -13,3 +13,4 @@ export const styleStrToObject = styleStr => {
   }
   return obj
 }
+export default styleStrToObject

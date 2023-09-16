@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { styleStrToObject } from '@/assets/svg/utils'
+import styleStrToObject from '@/assets/svg/utils'
 
 const IconGlobal = memo(() => {
   return (

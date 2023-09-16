@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { ItemWrapper } from '@/components/room-item/style'
-// import Rating from '@mui/material/Rating'
+import { Rate } from 'antd'
 
 const RoomItem = memo(props => {
   const { itemData } = props
@@ -16,13 +16,7 @@ const RoomItem = memo(props => {
         <div className="price">¥{itemData.price}/晚</div>
 
         <div className="bottom">
-          {/*使用mui组件库暂时存在问题*/}
-          {/*<Rating*/}
-          {/*  value={itemData.star_rating ?? 5}*/}
-          {/*  precision={0.1}*/}
-          {/*  readOnly*/}
-          {/*  sx={{ fontSize: '12px', color: '#00848A', marginRight: '-1px' }}*/}
-          {/*/>*/}
+          <Rate value={itemData.star_rating ?? 5}></Rate>
           <span className="count">{itemData.reviews_count}</span>
           {itemData.bottom_info && (
             <span className="extra">·{itemData.bottom_info?.content}</span>
