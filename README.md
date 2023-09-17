@@ -16,6 +16,6 @@
 npm install
 
 运行项目
-npm run dev
+npm run start
 ```
 
