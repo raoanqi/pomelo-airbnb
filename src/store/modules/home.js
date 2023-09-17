@@ -8,7 +8,7 @@ import {
 } from '@/services/modules/home'
 
 export const fetchHomeDataAction = createAsyncThunk(
-  'fetchdata',
+  'fetchHomeData',
   // 这里可以写多个action，考虑到都是home页面的数据，所以就放在一个action中进行实现
   /**
    * 这里可以使用多个await获取数据，但是因为await会阻塞后面的代码，所以不使用
